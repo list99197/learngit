@@ -186,7 +186,7 @@ getimagecode.src="/api/validateCode?sid="+Math.random();
                 if (res.data.status === 1) {
                   this.$message.error("验证失败,请重新输入验证码！");
                 } else {
-                  axios.get('/api/https://www.easy-mock.com/mock/5d3b5a681e44e31e2a64701a/usersfa/checkEmail').then(response=>{
+                  axios.get('https://www.easy-mock.com/mock/5d3b5a681e44e31e2a64701a/usersfa/checkEmail').then(response=>{
                     var res =response.data.data,
                       len = res.length,
                       allEmail= []

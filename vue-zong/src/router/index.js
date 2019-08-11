@@ -15,7 +15,7 @@ export default new Router({
       component: Register
     },
     {
-      path: '/helloWorld',
+      path: '/loginbacks/helloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -27,7 +27,7 @@ export default new Router({
     {
       path: '/loginbacks',
       name: 'Loginbacks',
-      component: Loginbacks
+      component: Loginbacks,
     }
   ]
 })
