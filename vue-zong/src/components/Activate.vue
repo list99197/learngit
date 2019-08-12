@@ -9,6 +9,7 @@
 </template>
 
 <script>
+  import axios from "axios";
     export default {
         name: "Activate",
       methods: {
@@ -16,9 +17,9 @@
           var email = this.$route.query.email
           var validateCode = this.$route.query.validateCode
           axios
-            .post("/api/admin/department/activate", {
-              email: email,
-              validate_Code:validateCode
+            .post("/api/register/department/activate", {
+              email: 'email',
+              validate_Code:'validateCode'
             })
             .then(res => {
               if (res.data.status === "200") {
