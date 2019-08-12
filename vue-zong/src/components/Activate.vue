@@ -14,12 +14,12 @@
         name: "Activate",
       methods: {
         getData: function () {
+          console.log("nnn")
           var email = this.$route.query.email
           var validateCode = this.$route.query.validateCode
-          axios
-            .post("/api/register/department/activate", {
-              email: 'email',
-              validate_Code:'validateCode'
+          axios.post("/api/register/department/activate", {
+              email: email,
+              validate_Code:validateCode
             })
             .then(res => {
               if (res.data.status === "200") {
