@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Register from "../components/Register";
 import Activate from "../components/Activate";
 import Loginbacks from "../components/Loginbacks";
+import FrontActivate from "../components/FrontActivate";
 
 Vue.use(Router)
 
@@ -29,6 +30,10 @@ export default new Router({
       path: '/loginbacks',
       name: 'Loginbacks',
       component: Loginbacks,
+    },{
+      path: '/frontActivate',
+      name: 'FrontActivate',
+      component: FrontActivate,
     }
   ]
 })

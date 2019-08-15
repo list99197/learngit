@@ -27,7 +27,7 @@
             </el-form-item>
             <hr class="belowemail">
             <el-form-item prop="college" label="">
-              <el-select v-model="user.college" @change="choseCollege" placeholder="所属学院" class="college-in" style="width: 128%;margin-left: -18.5%" >
+              <el-select v-model="user.college" @change="choseCollege" placeholder="所属学院" class="college-in" style="width: 128%;margin-left: -18.5%" clearable>
                 <i slot="prefix" class="fontReg regxueyuan"></i>
               <el-option v-for="item in ccollege"
                          :key="item.id"
@@ -38,7 +38,7 @@
             </el-form-item>
             <hr class="belowcollege">
             <el-form-item prop="dept_name" label="">
-              <el-select v-model="user.dept_name" placeholder="组织名称" class="dept-in" style="width: 128%;margin-left: -17%" >
+              <el-select v-model="user.dept_name" placeholder="组织名称" class="dept-in" style="width: 128%;margin-left: -17%"  clearable>
                 <i slot="prefix" class="fontReg regbumen"></i>
               <el-option v-for="item in deptname1"
                          :key="item.id"
@@ -207,7 +207,7 @@ getimagecode.src="/api/validateCode?sid="+Math.random();
                         .then(res => {
                           if (res.data.status === "004") {
                             this.$message.success("注册成功！");
-                            this.$router.push('/activate');
+                            this.$router.push('/frontActivate');
                           } else {
                             alert("注册出错！");
                           }
